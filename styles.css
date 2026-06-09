@@ -227,3 +227,55 @@ footer {
     font-size: 1.9rem;
   }
 }
+
+.garage {
+  position: relative;
+  overflow: hidden;
+  min-height: 360px;
+  border: 2px solid #2f2f35;
+  border-radius: 16px;
+  background-color: #111113;
+}
+
+.garage-door {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: repeating-linear-gradient(
+    to bottom,
+    #2f2f35,
+    #2f2f35 18px,
+    #1f1f23 18px,
+    #1f1f23 36px
+  );
+  border-bottom: 4px solid #b11226;
+  transition: transform 0.25s ease;
+}
+
+.garage-door p {
+  color: #f5f5f5;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.garage-content {
+  opacity: 0;
+  transform: translateY(30px);
+  padding: 2rem;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.garage.open .garage-door {
+  transform: translateY(-100%);
+}
+
+.garage.open .garage-content {
+  opacity: 1;
+  transform: translateY(0);
+}

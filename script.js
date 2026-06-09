@@ -2,6 +2,15 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 const contactForm = document.querySelector("#contact-form");
 const formStatus = document.querySelector("#form-status");
+const garage = document.querySelector(".garage");
+
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+});
 
 menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("show");
@@ -25,3 +34,21 @@ contactForm.addEventListener("submit", (event) => {
 
   contactForm.reset();
 });
+
+if (garage) {
+  const garageObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          garage.classList.add("open");
+        }
+      });
+    },
+    {
+      threshold: 0,
+      rootMargin: "-45% 0px -45% 0px",
+    },
+  );
+
+  garageObserver.observe(garage);
+}
