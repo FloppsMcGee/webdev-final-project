@@ -2,7 +2,7 @@
 
 Final Project:
 
-This is my final project for the Intro to Web Development class. Since I am a big fan of cars, F1, and love Audi, I decided to theme the website a bit after the Audi F1 theme. The site has an About section, Previous Work section, Projects section, and Contact section.
+This is my final project for the Intro to Web Development class. Since I am a big fan of cars, F1, and love the Audi team colors, I decided to theme the website a bit after the Audi F1 theme. The site has an About section, Previous Work section, Projects section, and Contact section.
 
 ## How to Run
 
