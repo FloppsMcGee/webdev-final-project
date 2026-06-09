@@ -1,31 +1,35 @@
 :root {
-  --color-text-main: #252525;
-  --color-background-main: #f5f1ea;
-  --color-header-background: #1f1f1f;
-  --color-footer-background: #111111;
-  --color-white: #ffffff;
-  --color-section-alt: #e3ddd3;
-  --color-button: #000000;
-  --color-button-hover: #3d3d3c;
-  --color-input-border: #9ca3af;
-  --color-card-shadow: rgba(0, 0, 0, 0.14);
+  --c-text: #f5f5f5;
+  --c-muted: #c7c9d1;
+  --c-bg: #0b0b0d;
+  --c-bg-alt: #151518;
+  --c-card: #1f1f23;
+  --c-border: #2f2f35;
+  --c-rev: #cf3109;
+  --c-rev-bright: #ff5e2d;
+  --c-input-bg: #111113;
+  --c-shadow: rgba(0, 0, 0, 0.35);
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  color: var(--color-text-main);
-  background-color: var(--color-background-main);
+  color: var(--c-text);
+  background-color: var(--c-bg);
 }
 
 header {
-  background: var(--color-header-background);
-  color: var(--color-white);
+  background: linear-gradient(135deg, var(--c-bg), var(--c-card), var(--c-rev));
+  color: var(--c-text);
 }
 
 .navbar {
@@ -33,11 +37,18 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  border-bottom: 1px solid var(--c-border);
 }
 
 .logo {
   margin: 0;
   font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+.logo::before {
+  content: "/// ";
+  color: var(--c-rev);
 }
 
 .nav-links {
@@ -49,62 +60,90 @@ header {
 }
 
 .nav-links a {
-  color: var(--color-white);
+  color: var(--c-text);
   text-decoration: none;
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  color: var(--c-rev-bright);
 }
 
 .menu-toggle {
   display: none;
   font-size: 1.5rem;
   background: none;
-  color: var(--color-white);
+  color: var(--c-text);
   border: none;
   cursor: pointer;
 }
 
 .hero {
-  padding: 5rem 1.5rem;
+  padding: 6rem 1.5rem 5rem;
   text-align: center;
 }
 
 .hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  max-width: 850px;
+  margin: 0 auto 1rem;
+  font-size: 2.6rem;
+  line-height: 1.15;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--c-muted);
 }
 
 .button {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.25rem;
-  background-color: var(--color-button);
-  color: var(--color-white);
+  margin-top: 1.5rem;
+  padding: 0.85rem 1.35rem;
+  background-color: var(--c-rev);
+  color: var(--c-text);
   text-decoration: none;
   border: none;
-  border-radius: 8px;
+  border-radius: 999px;
   cursor: pointer;
+  font-weight: bold;
 }
 
 .button:hover {
-  background-color: var(--color-button-hover);
+  background-color: var(--c-rev-bright);
 }
 
 .section {
   padding: 4rem 1.5rem;
+  background-color: var(--c-bg);
 }
 
 .alt-section {
-  background-color: var(--color-section-alt);
+  background-color: var(--c-bg-alt);
+}
+
+.section h2 {
+  border-left: 5px solid var(--c-rev);
+  padding-left: 1rem;
 }
 
 .card {
-  background: var(--color-white);
+  background: var(--c-card);
   padding: 1.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px var(--color-card-shadow);
+  border-radius: 14px;
+  border: 1px solid var(--c-border);
+  box-shadow: 0 8px 24px var(--c-shadow);
+}
+
+.card h3 {
+  color: var(--c-text);
+}
+
+.card p {
+  color: var(--c-muted);
+}
+
+.card a {
+  color: var(--c-rev-bright);
 }
 
 .project-grid {
@@ -123,9 +162,16 @@ form {
 input,
 textarea {
   padding: 0.75rem;
-  border: 1px solid var(--color-input-border);
-  border-radius: 6px;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
   font: inherit;
+  background-color: var(--c-input-bg);
+  color: var(--c-text);
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--c-rev);
 }
 
 textarea {
@@ -140,8 +186,8 @@ textarea {
 footer {
   text-align: center;
   padding: 1.5rem;
-  background: var(--color-footer-background);
-  color: var(--color-white);
+  background: var(--c-bg);
+  color: var(--c-muted);
 }
 
 @media (max-width: 768px) {
@@ -169,7 +215,15 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .hero {
+    padding: 4rem 1.5rem;
+  }
+
+  .section {
+    padding: 3rem 1.5rem;
+  }
+
   .hero h2 {
-    font-size: 1.8rem;
+    font-size: 1.9rem;
   }
 }
