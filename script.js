@@ -2,6 +2,7 @@ const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 const contactForm = document.querySelector("#contact-form");
 const formStatus = document.querySelector("#form-status");
+const garage = document.querySelector(".garage");
 
 if ("scrollRestoration" in history) {
   history.scrollRestoration = "manual";
@@ -33,8 +34,6 @@ contactForm.addEventListener("submit", (event) => {
 
   contactForm.reset();
 });
-
-const garage = document.querySelector(".garage");
 
 if (garage) {
   const garageObserver = new IntersectionObserver(

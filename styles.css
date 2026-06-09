@@ -118,7 +118,7 @@ header {
 }
 
 .section {
-  padding: 4rem 1.5rem;
+  padding: 1rem 1.5rem;
   background-color: var(--c-bg);
 }
 
@@ -224,10 +224,6 @@ footer {
     padding: 4rem 1.5rem;
   }
 
-  .section {
-    padding: 3rem 1.5rem;
-  }
-
   .hero h2 {
     font-size: 1.9rem;
   }
@@ -236,7 +232,7 @@ footer {
 .garage {
   position: relative;
   overflow: hidden;
-  min-height: 360px;
+  min-height: 220px;
   border: 2px solid #2f2f35;
   border-radius: 16px;
   background-color: #111113;
@@ -283,4 +279,74 @@ footer {
 .garage.open .garage-content {
   opacity: 1;
   transform: translateY(0);
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 52px;
+  color: var(--c-muted);
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid var(--c-border);
+  border-radius: 50%;
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--c-rev-bright);
+  border-color: var(--c-rev-bright);
+  box-shadow:
+    0 0 10px var(--c-rev-bright),
+    0 0 25px var(--c-rev-bright),
+    0 0 45px var(--c-rev);
+  transform: translateY(-4px);
+}
+
+.checkered-flag {
+  color: var(--c-text);
+  width: calc(100% + 3rem);
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  height: 24px;
+  background: conic-gradient(
+    from 0deg,
+    rgba(255, 255, 255, 0.25) 0deg,
+    rgba(255, 255, 255, 0.25) 90deg,
+    transparent 90deg,
+    transparent 180deg,
+    rgba(255, 255, 255, 0.25) 180deg,
+    rgba(255, 255, 255, 0.25) 270deg,
+    transparent 270deg,
+    transparent 360deg
+  );
+  background-size: 24px 24px;
+  background-position:
+    0 0,
+    0 12px,
+    12px -12px,
+    -12px 0;
+  background-color: #0b0b0d;
+}
+
+.about-me {
+  color: var(--c-text);
+  width: 60%;
+}
+
+#work {
+  padding-bottom: 2.7rem;
 }

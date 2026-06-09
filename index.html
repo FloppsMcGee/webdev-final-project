@@ -6,6 +6,10 @@
     <title>Yusuf Ahmed | Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -34,7 +38,7 @@
     </header>
 
     <main>
-      <section id="about" class="section">
+      <section id="about" class="section about-me">
         <h2>About Me</h2>
         <p>
           I am an Embedded Systems Engineer pursuing a Masters degree in AI and
@@ -125,7 +129,6 @@
 
       <section id="contact" class="section alt-section">
         <h2>Contact Me</h2>
-
         <form id="contact-form">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" />
@@ -138,13 +141,32 @@
 
           <button type="submit" class="button">Send Message</button>
         </form>
-
         <p id="form-status" aria-live="polite"></p>
       </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 Yusuf Ahmed</p>
+      <div class="social-links">
+        <a
+          href="https://www.linkedin.com/in/muhammed-yusuf-ahmed/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn profile"
+        >
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+
+        <a
+          href="https://github.com/FloppsMcGee"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub profile"
+        >
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+
+      <p class="checkered-flag" aria-hidden="true">&copy; 2026 Yusuf Ahmed</p>
     </footer>
   </body>
 </html>
