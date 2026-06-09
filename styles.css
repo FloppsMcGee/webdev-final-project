@@ -17,6 +17,7 @@
 
 html {
   scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 body {
@@ -25,6 +26,10 @@ body {
   line-height: 1.6;
   color: var(--c-text);
   background-color: var(--c-bg);
+  -ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 header {
@@ -246,13 +251,13 @@ footer {
   align-items: center;
   background: repeating-linear-gradient(
     to bottom,
-    #2f2f35,
-    #2f2f35 18px,
+    black,
+    rgb(39, 36, 36) 18px,
     #1f1f23 18px,
     #1f1f23 36px
   );
   border-bottom: 4px solid #b11226;
-  transition: transform 0.25s ease;
+  transition: transform 0.8s ease;
 }
 
 .garage-door p {
