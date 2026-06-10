@@ -29,7 +29,7 @@ contactForm.addEventListener("submit", (event) => {
     return;
   }
 
-  formStatus.textContent = "Thank you! Your message has been received.";
+  formStatus.textContent = "Message sent. (not really :) )";
   formStatus.style.color = "darkgreen";
 
   contactForm.reset();
